@@ -1,5 +1,7 @@
 CC := armcl
 
+BASEDIR := $(dir $(lastword $(MAKEFILE_LIST)))
+SUPPORT := $(BASEDIR)/support
 SOURCES := $(shell find $(SRCDIR) $(SUPPORT) -name '*.c' -or -name '*.asm')
 
 CFLAGS := \
@@ -17,7 +19,7 @@ LDFLAGS := \
 
 .PHONY: run
 run: $(TARGET)
-	$(dir $(lastword $(MAKEFILE_LIST)))/run $<
+	$(BASEDIR)/run $<
 
 .PHONY: clean
 clean:
@@ -27,4 +29,3 @@ $(TARGET): $(SOURCES)
 	$(CC) $(CFLAGS) $^ -z $(LDFLAGS) -o $@
 	armstrip -p $@
 	make clean
-
