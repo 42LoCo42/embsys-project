@@ -52,7 +52,7 @@ static void AppTaskStart(void* p_arg) {
 	BSP_LED_Off(BSP_GPIO_LED_ALL);
 
 	for(;;) {
-		// BSP_LED_Toggle(BSP_GPIO_LED1);
+		BSP_LED_Toggle(BSP_GPIO_LED1);
 		OSTimeDlyHMSM(
 			(CPU_INT16U) 0, // hours
 			(CPU_INT16U) 0, // minutes
