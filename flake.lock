@@ -1,0 +1,48 @@
+{
+  "nodes": {
+    "mspgcc-ti": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "mspgcc-ti",
+        "lastModified": 1685594557,
+        "narHash": "sha256-1fZn37MEfoSIzXrRQgHMTy4ayPcEBRHtGpkInPcenNc=",
+        "owner": "42loco42",
+        "repo": "flakes",
+        "rev": "26cdb33f40b60702b05e3cc676e64e8a0e7b97f7",
+        "type": "github"
+      },
+      "original": {
+        "dir": "mspgcc-ti",
+        "owner": "42loco42",
+        "repo": "flakes",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1685498995,
+        "narHash": "sha256-rdyjnkq87tJp+T2Bm1OD/9NXKSsh/vLlPeqCc/mm7qs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9cfaa8a1a00830d17487cb60a19bb86f96f09b27",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "mspgcc-ti": "mspgcc-ti",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

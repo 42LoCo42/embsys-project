@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+declare run_PID
+coproc run (DISPLAY="" script -qec "JRunExe -device msp432p401r '$1'" /dev/null)
+
+while read -ru "${run[0]}" line; do
+	echo "$line"
+	grep -q "=" <<< "$line" && kill "$run_PID" && break
+done
