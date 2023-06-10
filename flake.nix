@@ -1,9 +1,6 @@
 {
   description = "µC/OS-III experiments";
 
-  inputs.mspgcc-ti.url = "github:42loco42/flakes?dir=mspgcc-ti";
-  inputs.mspgcc-ti.inputs.nixpkgs.follows = "nixpkgs";
-
   outputs = { self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
